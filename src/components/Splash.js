@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Icon } from 'semantic-ui-react';
 
 // homepage with routes
 
@@ -68,7 +69,8 @@ const Splash = () => (
         cv >> <Link href="/">here</Link>
       </Text>
       <Text size="small">
-        github >> <Link href="http://github.com/stylate">here</Link>
+        <Icon name='github' size='large'/>
+        <Icon name='linkedin' size='large'/>
       </Text>
     </Content>
   </Wrapper>
