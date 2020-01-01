@@ -8,8 +8,7 @@ import { Icon } from "semantic-ui-react";
 
 // css - todo: animations/hover
 const Wrapper = styled.div`
-  max-width: 700px;
-  padding: 50px;
+  padding: 45px;
 `;
 
 const Content = styled.div`

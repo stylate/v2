@@ -18,12 +18,12 @@ const Layout = styled.div`
 const Home = () => {
   return (
     <Layout>
-      <Grid doubling columns={2}>
-        <Grid.Column mobile={24} computer={12}>
+      <Grid columns='equal'>
+        <Grid.Column floated='left' mobile={16} computer={7}>
           <Splash />
         </Grid.Column>
-        <Responsive minWidth={5000}>
-          <Grid.Column>
+        <Responsive minWidth={900}>
+          <Grid.Column floated='right' width={9}>
             <Three />
           </Grid.Column>
         </Responsive>
