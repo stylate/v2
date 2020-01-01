@@ -60,8 +60,8 @@ const Splash = () => {
         </Text>
         <Items />
         <Text size="small">
-          <Icon name="github" size="large" />
-          <Icon name="linkedin" size="large" />
+          <Link href="https://github.com/stylate"><Icon name="github" size="large" /></Link>
+          <Link href="https://www.linkedin.com/in/alandn/"><Icon name="linkedin" size="large" /></Link>
         </Text>
       </Content>
     </Wrapper>

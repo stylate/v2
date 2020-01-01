@@ -8,22 +8,26 @@ const Wrapper = styled.div`
   margin-left: 13px;
 `;
 
+const Row = styled(Grid.Row)`
+    padding: 0px;
+`;
+
 const Items = props => {
   return (
     <Wrapper>
       <Grid rows="equal">
-        <Grid.Row>
+        <Row>
           <Item />
-        </Grid.Row>
-        <Grid.Row>
+        </Row>
+        <Row>
           <Item />
-        </Grid.Row>
-        <Grid.Row>
+        </Row>
+        <Row>
           <Item />
-        </Grid.Row>
-        <Grid.Row>
+        </Row>
+        <Row>
           <Item />
-        </Grid.Row>
+        </Row>
       </Grid>
     </Wrapper>
   );
