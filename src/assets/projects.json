@@ -1,42 +1,37 @@
 [
     {
-        "id": 1,
-        "title": "Music Visualizer",
-        "categories": "JAVASCRIPT, GRAPHICS",
+        "header": "Music Visualizer",
+        "meta": "JAVASCRIPT, GRAPHICS",
         "description": "Visualizing audio as a mesh based on frequencies with Three.js and SoundCloud API.",
         "image": "",
-        "url": "https://www.notion.so/Audio-Visualization-with-three-js-0d7117978b29484e8f356625d70e1cbd"
+        "href": "https://www.notion.so/Audio-Visualization-with-three-js-0d7117978b29484e8f356625d70e1cbd"
     },
     {
-        "id": 2,
-        "title": "ClothSim",
-        "categories": "C++, GRAPHICS",
+        "header": "ClothSim",
+        "meta": "C++, GRAPHICS",
         "description": "Real-time simulation of cloth using a mass and spring based system.",
         "image": "",
-        "url": ""
+        "href": ""
     },
     {
-        "id": 3,
-        "title": "Pathfinder",
-        "categories": "C++, GRAPHICS",
+        "header": "Pathfinder",
+        "meta": "C++, GRAPHICS",
         "description": "Physically-based renderer based on 3D COLLADA models and a pathtracing algorithm.",
         "image": "",
-        "url": ""
+        "href": ""
     },
     {
-        "id": 4,
-        "title": "Mosaic Builder",
-        "categories": "PYTHON, PHOTO MANIP.",
+        "header": "Mosaic Builder",
+        "meta": "PYTHON, PHOTO MANIP.",
         "description": "Automatic image mosaicing with the Multi-Scale Oriented Patches (MOPS) algorithm.",
         "image": "",
-        "url": ""
+        "href": ""
     },
     {
-        "id": 5,
-        "title": "AudioCrawler",
-        "categories": "PYTHON, MACHINE LEARNING",
+        "header": "AudioCrawler",
+        "meta": "PYTHON, MACHINE LEARNING",
         "description": "LSTM classifier that reliably identifies music genres based on audio spectrograms.",
         "image": "",
-        "url": "https://github.com/stylate/AudioCrawler"
+        "href": "https://github.com/stylate/AudioCrawler"
     }
 ]

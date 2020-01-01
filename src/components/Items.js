@@ -1,34 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid } from "semantic-ui-react";
-import Item from "./Item";
+import { Grid, Card } from "semantic-ui-react";
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 80%;
   margin-left: 13px;
 `;
 
 const Row = styled(Grid.Row)`
-    padding: 0px;
+  padding: 0px;
 `;
 
 const Items = props => {
+  const { items } = props;
   return (
     <Wrapper>
-      <Grid rows="equal">
-        <Row>
-          <Item />
-        </Row>
-        <Row>
-          <Item />
-        </Row>
-        <Row>
-          <Item />
-        </Row>
-        <Row>
-          <Item />
-        </Row>
-      </Grid>
+      <Card.Group fluid items={items} />
     </Wrapper>
   );
 };

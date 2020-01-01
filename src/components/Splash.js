@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Items from './Items';
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
+import Projects from '../assets/projects.json';
 
 // homepage with routes
 
 // css - todo: animations/hover
 const Wrapper = styled.div`
   padding: 45px;
+  margin-left: 7%;
 `;
 
 const Content = styled.div`
@@ -52,13 +54,17 @@ const Splash = () => {
           recently graduated from UC Berkeley, studying computer science.
           interests lie heavily within digital media, social good, and computer
           graphics. also shoots a lot of{" "}
-          <Link href="https://alandn.me">photos</Link>.
+          <Link href="https://alandn.me"><u>photos</u></Link>.
         </Text>
         <Text size="small">previously >> akamai, fox networks</Text>
         <Text size="small">
-          cv >> <Link href="/">here</Link>
+          cv >> <Link href="/"><u>here</u></Link>
         </Text>
-        <Items />
+        <Text>
+          projects >>
+        </Text>
+        <Items items={Projects}/>
+        <br/>
         <Text size="small">
           <Link href="https://github.com/stylate"><Icon name="github" size="large" /></Link>
           <Link href="https://www.linkedin.com/in/alandn/"><Icon name="linkedin" size="large" /></Link>

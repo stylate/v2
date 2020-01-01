@@ -25,7 +25,7 @@ const Scene = props => {
   useFrame(() => {
     group.current.__objects[1].uniforms["time"].value += 0.02;
   }); // render loop
-  gl.setSize(window.innerWidth / 2, window.innerHeight * 1.1);
+  gl.setSize(window.innerWidth / 2, window.innerHeight * 1.5);
   return (
     <mesh ref={group} scale={[viewport.width, viewport.height, 1]}>
       <planeBufferGeometry attach="geometry" args={[1, 1]} />
