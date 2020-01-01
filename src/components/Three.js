@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 const Scene = props => {
   const { url, disp } = props;
   const group = useRef();
-  const { camera, viewport, gl } = useThree();
+  const { viewport, gl } = useThree();
   const [texture, noise] = useMemo(() => {
     const loader = new THREE.TextureLoader();
     return [loader.load(url), loader.load(disp)];

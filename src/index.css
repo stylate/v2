@@ -1,6 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=EB%20Garamond|Overpass%20Mono);
+
+@font-face {
+  font-family: "proxima-light";
+  src: url("./assets/proxima-light.otf") format("opentype");
+}
+
 body {
   margin: 0;
-  font-family: bjpg;
+  color: #597188;
+  font-family: 'Overpass Mono', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

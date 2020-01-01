@@ -11,12 +11,12 @@ const Wrapper = styled.div`
   max-width: 700px;
   padding: 64px;
   margin-left: 70px;
-  font-weight: 100;
 `;
+
 const Content = styled.div``;
 
 const Header = styled.h1`
-  font-family: bjpg;
+  font-family: "EB Garamond", serif;
   font-size: 48px;
   font-weight: inherit;
   letter-spacing: 1.2px;
