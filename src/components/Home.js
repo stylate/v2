@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <Wrapper>
       <Grid>
-        <Grid.Column width={10}>
+        <Grid.Column width={8}>
           <Splash />
         </Grid.Column>
         <Responsive minWidth={992}>
