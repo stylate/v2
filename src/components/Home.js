@@ -13,8 +13,6 @@ const Layout = styled.div`
   }
 `;
 
-// ignore three for now
-
 const Home = () => {
   return (
     <Layout>
