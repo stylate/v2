@@ -1,21 +1,21 @@
 const perlin = {
-    transparent: true,
-    uniforms: {
-      effectFactor: { type: 'f', value: 0.075 },
-      dispFactor: { type: 'f', value: 0 },
-      speed: { type: 'f', value: 0.5 },
-      time: { type: 'f', value: 0 },
-      texture: { type: 't', value: undefined },
-      disp: { type: 't', value: undefined }
-    },
-    vertexShader: `
+  transparent: true,
+  uniforms: {
+    effectFactor: { type: "f", value: 0.075 },
+    dispFactor: { type: "f", value: 0 },
+    speed: { type: "f", value: 0.5 },
+    time: { type: "f", value: 0 },
+    texture: { type: "t", value: undefined },
+    disp: { type: "t", value: undefined }
+  },
+  vertexShader: `
       varying vec2 vUv;
       void main() {
         vUv = uv;
         gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
       }
     `,
-    fragmentShader: `
+  fragmentShader: `
       varying vec2 vUv;
       uniform sampler2D texture;
       uniform sampler2D disp;
@@ -35,6 +35,6 @@ const perlin = {
         gl_FragColor = texture2D(texture, shift);
       }
   `
-  };
-  
-  export { perlin }
+};
+
+export { perlin };
