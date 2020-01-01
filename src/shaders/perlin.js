@@ -35,6 +35,6 @@ const perlin = {
         gl_FragColor = texture2D(texture, shift);
       }
   `
-  }
+  };
   
   export { perlin }
