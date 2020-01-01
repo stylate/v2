@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import anime from "animejs";
-import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Items from './Items';
+import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 
 // homepage with routes
@@ -33,15 +34,6 @@ const Link = styled.a`
   color: inherit;
 `;
 
-const List = styled.ul`
-  padding-left: 12px;
-`;
-
-const ListItem = styled.li`
-  margin-bottom: 15px;
-  list-style-type: none;
-`;
-
 const Splash = () => {
   useEffect(() => {
     anime({
@@ -66,6 +58,7 @@ const Splash = () => {
         <Text size="small">
           cv >> <Link href="/">here</Link>
         </Text>
+        <Items />
         <Text size="small">
           <Icon name="github" size="large" />
           <Icon name="linkedin" size="large" />
