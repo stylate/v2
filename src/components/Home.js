@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <Layout>
       <Grid doubling columns={2}>
-        <Grid.Column>
+        <Grid.Column mobile={24} computer={12}>
           <Splash />
         </Grid.Column>
         <Responsive minWidth={5000}>

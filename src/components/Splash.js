@@ -8,10 +8,8 @@ import { Icon } from "semantic-ui-react";
 
 // css - todo: animations/hover
 const Wrapper = styled.div`
-  min-width: 540px;
   max-width: 700px;
-  padding: 64px;
-  margin-left: 50px;
+  padding: 50px;
 `;
 
 const Content = styled.div`
@@ -29,7 +27,7 @@ const Text = styled.div`
   font-size: ${props => (props.size === "small" ? 12 : 16)}px;
   line-height: ${props => (props.size === "small" ? 0.3 : 1.5)}em;
   margin-bottom: 20px;
-  width: 80%;
+  width: 100%;
 `;
 
 const Link = styled.a`
@@ -64,15 +62,6 @@ const Splash = () => {
           interests lie heavily within digital media, social good, and computer
           graphics. also shoots a lot of{" "}
           <Link href="https://alandn.me">photos</Link>.
-        </Text>
-        <Text size="small">
-          writeups >>
-          <List>
-            <ListItem>audio visualizer</ListItem>
-            <ListItem>pathfinder</ListItem>
-            <ListItem>clothsim</ListItem>
-            <ListItem>image warper</ListItem>
-          </List>
         </Text>
         <Text size="small">previously >> akamai, fox networks</Text>
         <Text size="small">
