@@ -22,13 +22,10 @@ const Scene = props => {
     const loader = new THREE.TextureLoader();
     return [loader.load(url), loader.load(disp)];
   }, [url, disp]);
-
-  camera.aspect = window.innerWidth / window.innerHeight;
   useFrame(() => {
     group.current.__objects[1].uniforms["time"].value += 0.02;
   }); // render loop
-  console.log("gl: ", gl);
-  console.log("innerWidth: ", window.innerWidth);
+  console.log("inner width: ", window.innerWidth);
   gl.setSize(window.innerWidth / 2.04, window.innerHeight * 1.1);
   return (
     <mesh ref={group} scale={[viewport.width, viewport.height, 1]}>
