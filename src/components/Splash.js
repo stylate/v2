@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Segment } from "semantic-ui-react";
 
 // homepage with routes
 
@@ -10,17 +9,18 @@ const Wrapper = styled.div`
   min-width: 540px;
   max-width: 700px;
   padding: 64px;
-  margin-left: 70px;
+  margin-left: 50px;
 `;
 
-const Content = styled.div``;
+const Content = styled.div`
+  opacity: 0.9;
+`;
 
 const Header = styled.h1`
   font-family: "EB Garamond", serif;
   font-size: 48px;
   font-weight: inherit;
   letter-spacing: 1.2px;
-  opacity: 0.9;
 `;
 
 const Text = styled.div`
@@ -30,18 +30,45 @@ const Text = styled.div`
   width: 80%;
 `;
 
+const Link = styled.a`
+  color: inherit;
+`;
+
+const List = styled.ul`
+    padding-left: 12px;
+`;
+
+const ListItem = styled.li`
+    margin-bottom: 15px;
+    list-style-type: none;
+`
+;
+
 const Splash = () => (
   <Wrapper>
     <Content>
-      <Header>hello </Header>
+      <Header>alan nguyen</Header>
       <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        recently graduated from UC Berkeley, studying computer science.
+        interests lie heavily within digital media, social good, and computer
+        graphics. also shoots a lot of{" "}
+        <Link href="https://alandn.me">photos</Link>.
+      </Text>
+      <Text size="small">
+        writeups >>
+        <List>
+          <ListItem>audio visualizer</ListItem>
+          <ListItem>pathfinder</ListItem>
+          <ListItem>clothsim</ListItem>
+          <ListItem>image warper</ListItem>
+        </List>
+      </Text>
+      <Text size="small">previously >> akamai, fox networks</Text>
+      <Text size="small">
+        cv >> <Link href="/">here</Link>
+      </Text>
+      <Text size="small">
+        github >> <Link href="http://github.com/stylate">here</Link>
       </Text>
     </Content>
   </Wrapper>

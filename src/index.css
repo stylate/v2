@@ -5,6 +5,10 @@
   src: url("./assets/proxima-light.otf") format("opentype");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   color: #597188;
