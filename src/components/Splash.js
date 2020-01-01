@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import anime from "animejs";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Icon } from 'semantic-ui-react';
+import { Icon } from "semantic-ui-react";
 
 // homepage with routes
 
-// css
+// css - todo: animations/hover
 const Wrapper = styled.div`
   min-width: 540px;
   max-width: 700px;
@@ -36,44 +37,54 @@ const Link = styled.a`
 `;
 
 const List = styled.ul`
-    padding-left: 12px;
+  padding-left: 12px;
 `;
 
 const ListItem = styled.li`
-    margin-bottom: 15px;
-    list-style-type: none;
-`
-;
+  margin-bottom: 15px;
+  list-style-type: none;
+`;
 
-const Splash = () => (
-  <Wrapper>
-    <Content>
-      <Header>alan nguyen</Header>
-      <Text>
-        recently graduated from UC Berkeley, studying computer science.
-        interests lie heavily within digital media, social good, and computer
-        graphics. also shoots a lot of{" "}
-        <Link href="https://alandn.me">photos</Link>.
-      </Text>
-      <Text size="small">
-        writeups >>
-        <List>
-          <ListItem>audio visualizer</ListItem>
-          <ListItem>pathfinder</ListItem>
-          <ListItem>clothsim</ListItem>
-          <ListItem>image warper</ListItem>
-        </List>
-      </Text>
-      <Text size="small">previously >> akamai, fox networks</Text>
-      <Text size="small">
-        cv >> <Link href="/">here</Link>
-      </Text>
-      <Text size="small">
-        <Icon name='github' size='large'/>
-        <Icon name='linkedin' size='large'/>
-      </Text>
-    </Content>
-  </Wrapper>
-);
+const Splash = () => {
+  useEffect(() => {
+    anime({
+      targets: Wrapper,
+      opacity: [0, 100],
+      delay: 2000,
+      easing: "easeInOutExpo",
+      duration: 3000
+    });
+  }, []);
+  return (
+    <Wrapper>
+      <Content>
+        <Header>alan nguyen</Header>
+        <Text>
+          recently graduated from UC Berkeley, studying computer science.
+          interests lie heavily within digital media, social good, and computer
+          graphics. also shoots a lot of{" "}
+          <Link href="https://alandn.me">photos</Link>.
+        </Text>
+        <Text size="small">
+          writeups >>
+          <List>
+            <ListItem>audio visualizer</ListItem>
+            <ListItem>pathfinder</ListItem>
+            <ListItem>clothsim</ListItem>
+            <ListItem>image warper</ListItem>
+          </List>
+        </Text>
+        <Text size="small">previously >> akamai, fox networks</Text>
+        <Text size="small">
+          cv >> <Link href="/">here</Link>
+        </Text>
+        <Text size="small">
+          <Icon name="github" size="large" />
+          <Icon name="linkedin" size="large" />
+        </Text>
+      </Content>
+    </Wrapper>
+  );
+};
 
 export default Splash;
