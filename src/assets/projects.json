@@ -11,7 +11,7 @@
         "meta": "C++, GRAPHICS",
         "description": "Real-time simulation of cloth using a mass and spring based system.",
         "image": "",
-        "href": ""
+        "href": "/clothsim"
     },
     {
         "header": "Pathfinder",
