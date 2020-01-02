@@ -4,7 +4,7 @@
         "meta": "JAVASCRIPT, GRAPHICS",
         "description": "Visualizing audio as a mesh based on frequencies with Three.js and SoundCloud API.",
         "image": "",
-        "href": "https://www.notion.so/Audio-Visualization-with-three-js-0d7117978b29484e8f356625d70e1cbd"
+        "href": "/hex"
     },
     {
         "header": "ClothSim",
@@ -14,7 +14,7 @@
         "href": "/clothsim"
     },
     {
-        "header": "Pathfinder",
+        "header": "Pathtracer",
         "meta": "C++, GRAPHICS",
         "description": "Physically-based renderer based on 3D COLLADA models and a pathtracing algorithm.",
         "image": "",
@@ -32,6 +32,6 @@
         "meta": "PYTHON, MACHINE LEARNING",
         "description": "LSTM classifier that reliably identifies music genres based on audio spectrograms.",
         "image": "",
-        "href": "https://github.com/stylate/AudioCrawler"
+        "href": "/crawler"
     }
 ]
