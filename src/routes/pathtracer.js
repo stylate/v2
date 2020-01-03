@@ -516,7 +516,9 @@ export const Pathtracer = () => {
           functionalities—specifically the depth of field.
         </p>
 
-        <p><u>Disclaimer:</u> Best viewed on non-mobile devices.</p>
+        <p>
+          <u>Disclaimer:</u> Best viewed on non-mobile devices.
+        </p>
         <Header as="h2">Ray Generation & Scene Interaction</Header>
         <p>
           In this part, we implement ray generation; that is, we shoot rays
@@ -853,7 +855,7 @@ export const Pathtracer = () => {
         <p>
           Thus, to compute zero bounces of light, we simply return the
           intersection's emitted light. For one bounce of light, we return
-          either hemisphere or importance sampling based on the parameter
+          either hemisphere or importance sampling based on the parameter{" "}
           <kbd>direct_hemisphere_sample</kbd>. When it comes to russian
           roulette, we give a probability of <kbd>0.7</kbd> and call{" "}
           <kbd>coin_flip(p)</kbd>. If true, then the ray gets terminated. When
@@ -996,9 +998,9 @@ export const Pathtracer = () => {
         <p>
           A refreshing definition on refraction is light being transmitted
           through a surface. How this works specifically is through{" "}
-          <a href="https://en.wikipedia.org/wiki/Snell%27s_law">SSnell's Law</a>
-          , or in other words, the law of refraction. Suppose that the light
-          we're working with is going in direction wo. If its z coordinate is
+          <a href="https://en.wikipedia.org/wiki/Snell%27s_law">Snell's Law</a>,
+          or in other words, the law of refraction. Suppose that the light we're
+          working with is going in direction wo. If its z coordinate is
           positive, then we can claim that the light is entering the material.
           Otherwise, light is exiting the material. Ultimately, Snell's law
           yields us the equation:
