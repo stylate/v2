@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Latex from "react-latex";
-import { Grid, Container, Header, Image, Embed } from "semantic-ui-react";
+import { Grid, Container, Header, Image, List } from "semantic-ui-react";
 
 const Wrapper = styled.div`
   margin-top: 5%;
@@ -22,6 +22,8 @@ export const ClothSim = () => {
   const verlet = "$x_{t + dt} = x_t + v_t \\times dt + a_t \\times dt^2$";
   const updated_verlet =
     "$x_{t + dt} = x_t + (1 - d) \\times (x_t - x_{t - dt}) + a_t \\times dt^2$";
+  const blinn_phong =
+    "$L = k_a I_a + k_d(I/r^2) \\times max(0, n \\dot l) + k_s(I/r^2) \\times max(0, n \\dot h)^p$";
   const grids = [
     <Grid stackable columns={2}>
       <Grid.Row>
@@ -142,6 +144,245 @@ export const ClothSim = () => {
             src="https://cloth-sim.s3-us-west-1.amazonaws.com/part2/default-view.png"
             size="medium"
           />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={3}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part3/ks50.png"
+            size="medium"
+          />
+          <figcaption align="middle">ks = 50</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part3/default.png"
+            size="medium"
+          />
+          <figcaption align="middle">ks = 5000</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part3/ks50000.png"
+            size="medium"
+          />
+          <figcaption align="middle">ks = 50000</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={3}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/self1.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/self2.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/self3.png"
+            size="medium"
+          />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={3}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/density2-1.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/density2-2.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/density2-3.png"
+            size="medium"
+          />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/density200-1.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/density200-2.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/density200-3.png"
+            size="medium"
+          />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={3}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks50-1.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks50-2.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks50-3.png"
+            size="medium"
+          />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks1000-1.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks1000-2.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks1000-3.png"
+            size="medium"
+          />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks20000-1.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks20000-2.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part4/ks20000-3.png"
+            size="medium"
+          />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={4}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/ambient.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/diffuse.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/phong.png"
+            size="medium"
+          />
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/final.png"
+            size="medium"
+          />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={2}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/bump.png"
+            size="medium"
+          />
+          <figcaption align="middle">Bump Mapping</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/displacement.png"
+            size="medium"
+          />
+          <figcaption align="middle">Displacement Mapping</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={2}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/bump-16.png"
+            size="medium"
+          />
+          <figcaption align="middle">
+            bump, <kbd>-o 16 -a 16</kbd>
+          </figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/displacement-16.png"
+            size="medium"
+          />
+          <figcaption align="middle">
+            displacement, <kbd>-o 16 -a 16</kbd>
+          </figcaption>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/bump-128.png"
+            size="medium"
+          />
+          <figcaption align="middle">
+            bump, <kbd>-o 128 -a 128</kbd>
+          </figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/displacement-128.png"
+            size="medium"
+          />
+          <figcaption align="middle">
+            displacement, <kbd>-o 128 -a 128</kbd>
+          </figcaption>
         </Grid.Column>
       </Grid.Row>
     </Grid>
@@ -325,7 +566,235 @@ export const ClothSim = () => {
         </p>
         {grids[3]}
 
-        <Header as='h2'>Object Collisions</Header>
+        <Header as="h2">Object Collisions</Header>
+        <p>
+          In this section, we implement collisions with both spheres and planes,
+          such that the cloth lies just outside the primitive object instead of
+          intersecting.
+        </p>
+        <p>The general algorithm is as follows:</p>
+        <List ordered>
+          <List.Item>
+            Calculate the tangent point where the point mass should have
+            intersected the sphere.
+          </List.Item>
+          <List.Item>
+            Compute the correction vector applied to last_position in order to
+            reach the tangent point.
+          </List.Item>
+          <List.Item>
+            Assign the new mass position to be <kbd>last_position</kbd> added by
+            the correction vector, adjusted by friction <kbd>1 - f</kbd>.
+          </List.Item>
+        </List>
+        <Header as="h3">Sphere</Header>
+        <p>
+          In the sphere render, we tinker with the spring constant once again.
+          This actually determines how much the cloth "drapes" over the sphere,
+          as we see below:
+        </p>
+        {grids[4]}
+        <Header as="h3">Plane</Header>
+        <p>
+          We apply the same algorithm, except that we also add to the correction
+          vector a very miniscule constant named <kbd>SURFACE_OFFSET</kbd> in
+          order to reach a point slightly above the tangent point. The picture
+          below depicts the cloth lying at rest on the plane. For this scenario,
+          our <kbd>SURFACE_OFFSET</kbd> was set to <kbd>0.0001</kbd>.
+        </p>
+        <Picture src="https://cloth-sim.s3-us-west-1.amazonaws.com/part3/plane.png" />
+
+        <Header as="h2">Self-Collision</Header>
+        <p>
+          Now, we want to make sure that the cloth is able to fold on itself
+          rather than clipping through itself (or in other words,
+          self-colliding). How we would usually compute this naively is by
+          comparing <i>all</i> pairs of point masses and their distances.
+          However, this quadratic run-time solution can be exhausting for the
+          CPU. Thus, we implement spatial hashing in order to reduce the amount
+          of computations and comparisons we have to perform.
+        </p>
+        <Header as="h3">Hashing</Header>
+        <p>
+          When the word "hash" comes up, what one automatically thinks of is a
+          key and a value. How we plan on generating a unique key is entirely
+          dependent on our point mass's position. For this scenario, consider
+          the following variables:
+        </p>
+        <List>
+          <List.Item>
+            <kbd>w = 3 * width / num_width_points</kbd>
+          </List.Item>
+          <List.Item>
+            <kbd>h = 3 * height / num_height_points</kbd>
+          </List.Item>
+          <List.Item>
+            <kbd>t = max(w, h)</kbd>
+          </List.Item>
+        </List>
+        <p>
+          These parameters ultimately define spatial hashing; that is, we
+          partition the 3D space into 3D boxes with specific dimensions—a bit
+          similar to balls and bins, perhaps.
+        </p>
+        <p>
+          Our hash position thus first starts with a new 3D vector being the
+          difference between the position vector and the remainder of dividing
+          the position's x, y, z coordinates by w, h, and t respectively;
+          somewhat like <kbd>pos.x - fmod(pos.x, w)</kbd>. We make this
+          difference in order to classify similar point masses to their spaces
+          depending on their positions. Then, we compute our final hashcode{" "}
+          <kbd>pos.x + pos.y * 109 + pos.z * 113</kbd>. This guarantees that our
+          buckets have a good amount of candidate point masses for future
+          comparison.
+        </p>
+        <p>
+          Our <kbd>(key, value)</kbd> pair ultimately is a float mapping to a
+          vector of candidate point masses.
+        </p>
+        <Header as="h3">Implementation</Header>
+        <p>
+          Consider an arbitrary pair of point masses: one "current" and one
+          "candidate." We want to determine if they're within{" "}
+          <kbd>2 * distance</kbd> units apart. If so, we want to make sure that
+          they are <i>exactly</i> <kbd>2 * distance</kbd> units apart, so the
+          cloth can be able to fold on itself. This can be done by computing a
+          correction vector that is applied to the current point mass.
+        </p>
+        <p>
+          Here's the catch: we want to cumulate all of these correction vectors
+          into one average correction vector after going through all of the
+          candidate pairs. Thus, our final computation is adding to the current
+          point mass position, the average correction vector divided by{" "}
+          <kbd>simulation_steps</kbd>.
+        </p>
+        <p>If implemented correctly, we get the following sequence:</p>
+        {grids[5]}
+        <p>
+          Now, let's see what happens when density gets modified (2 and 200)!
+        </p>
+        {grids[6]}
+        <p>
+          There are some notable differences when varying the density from 2 to
+          200 (we already have the default parameter 50). A low density cloth
+          appears to be significantly more smooth than its counterparts, and
+          vice versa for the high density cloth. This also leads to the cloth
+          folding itself significantly less as density decreases from negative
+          infinity.
+        </p>
+        <p>
+          Now, what happens if we tamper with the spring constant ks, from 50 to
+          1000 to 20000?
+        </p>
+        {grids[7]}
+        <p>
+          In fact, there exists an inverse relationship between <kbd>ks</kbd>{" "}
+          and the amount of folding. The higher <kbd>ks</kbd> is, the less
+          folding there is! Also, the cloth appears to expand much more as{" "}
+          <kbd>ks</kbd> grows. Lastly, <kbd>ks</kbd> also affects how rigid the
+          cloth is.
+        </p>
+
+        <Header as="h2">Shaders</Header>
+        <p>
+          In this section, we implement shaders, which are isolated programs
+          that run on parallel in the GPU, separate from the CPU. This takes
+          significantly less computation time! We operate with mainly vertex and
+          fragment shaders. Vertex shaders are inherently transformations to
+          vertices, and fragment shaders are a result of rasterization that
+          basically write in a color.
+        </p>
+        <Header as="h3">Blinn-Phong Shading Model</Header>
+        <p>
+          Consider the following model below (<kbd>L</kbd>, <kbd>k</kbd>,{" "}
+          <kbd>I</kbd>, <kbd>n</kbd>, <kbd>h</kbd> in vector notation):
+        </p>
+        <Math>
+          <Latex>{blinn_phong}</Latex>
+        </Math>
+        <p>
+          This model is basically a combination of ambient, diffuse, and
+          specular lighting. Ambient light is the leftmost term{" "}
+          <Latex>$k_a I_a$</Latex>; Diffuse lighting is the middle term, and
+          specular lighting is the last term. Before tackling the entire model
+          in hand, consider its sub-models instead. Diffuse shading is most
+          known for its uniformity; its shading is independent of view
+          direction, creating a more matte appearance as the diffuse coefficient
+          increases. Phong shading on the other hand is most known for its
+          emphasis on surface shading.
+        </p>
+        <p>
+          In short, the Blinn-Phong model combines these components (pictured
+          below).
+        </p>
+        <Picture src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/components.png" />
+        <p>
+          In regards to our sphere model, here's what it looks like with the
+          subcomponents individually, then combined:
+        </p>
+        {grids[8]}
+        <p>
+          Note that ambient appears to be very dark due to our selection of the
+          coefficients <Latex>$k_a$</Latex> and <Latex>$I_a$</Latex>.
+        </p>
+        <Header as="h3">Texture</Header>
+        <p>
+          We also implement texture sampling, such that we sample a given
+          texture at the texture space coordinate uv. Pictured below is a custom
+          texture that is sampled all over both the cloth and sphere!
+        </p>
+        <Picture src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/custom.png" />
+        <Header as="h3">Bump & Displacement Mapping</Header>
+        <p>
+          Bump Mapping gives fragment shaders the illusion of detail by
+          modifying the normal vector! We want to compute the modified normal
+          vector <kbd>(-du, -dv, 1)</kbd>, then convert it to model space with
+          the TBN vector (which consists of the tangent, bitangent, and the
+          normal vectors). We compute the following equation, where{" "}
+          <kbd>h(u, v)</kbd> indicates the height encoded by a height map.
+        </p>
+        <List>
+          <List.Item>
+            <Latex>
+              $dU = (h(u + 1/w, v) - h(h, v)) \times k_h \times k_n$
+            </Latex>
+          </List.Item>
+          <List.Item>
+            <Latex>
+              $dV = (h(u, v + 1/h) - h(h, v)) \times k_h \times k_n$
+            </Latex>
+          </List.Item>
+        </List>
+        <p>
+          Displacement mapping on the other hand, is modifying the vertex
+          positions to be consistent with the new bump geometry. We modify the
+          output vertex position in the vertex shader according to the equation
+          below (<kbd>p</kbd>, <kbd>n</kbd> in vector notation):
+        </p>
+        <Math>
+          <Latex>$p' = p + n \times h(u, v) \times k_h$</Latex>
+        </Math>
+        <p>
+          When done correctly, we get the following results with all parameters
+          being default.
+        </p>
+        {grids[9]}
+        <p>
+          Below are the following results after putting the <kbd>-o</kbd> and{" "}
+          <kbd>-a</kbd> flags to <kbd>16</kbd> and <kbd>128</kbd>, respectively.
+          We can notice that the sphere's resolution is much higher!
+        </p>
+        {grids[10]}
+        <Header as="h3">Environment-mapped Reflections</Header>
+        <p>
+          In this section, we implement an approximating mirror model by
+          computing the eye-ray <Latex>$w_o$</Latex>, reflecting wo over the
+          normal vector to get
+          <Latex>$w_i$</Latex>, then sampling the environment map on the
+          incoming direction <Latex>$w_i$</Latex>. If implemented correctly, we
+          get the following result:
+        </p>
+        <Picture src="https://cloth-sim.s3-us-west-1.amazonaws.com/part5/mirror.png" />
       </Container>
     </Wrapper>
   );
