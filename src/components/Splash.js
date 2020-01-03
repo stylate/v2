@@ -5,9 +5,6 @@ import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 import Projects from "../assets/projects.json";
 
-// todo: routes, project components
-
-// css - todo: animations/hover
 const Wrapper = styled.div`
   padding: 45px;
   margin-left: 7%;
@@ -25,6 +22,7 @@ const Header = styled.h1`
 `;
 
 const Text = styled.div`
+  font-family: "Overpass Mono", monospace;
   font-size: ${props => (props.size === "small" ? 12 : 16)}px;
   line-height: ${props => (props.size === "small" ? 0.3 : 1.5)}em;
   margin-bottom: 20px;

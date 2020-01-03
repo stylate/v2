@@ -1,18 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=EB%20Garamond|Overpass%20Mono|Nunito);
 
-@font-face {
-  font-family: "proxima-light";
-  src: url("./assets/proxima-light.otf") format("opentype");
-}
-
 * {
   box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'EB Garamond', serif;
 }
 
 body {
   margin: 0;
   color: #474747;
-  font-family: 'Overpass Mono', monospace;
   font-style: normal;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;

@@ -1,3 +1,8 @@
 /*******************************
          Site Overrides
 *******************************/
+
+@font-face {
+  font-family: "proxima-light";
+  src: url("../../../assets/proxima-light.otf") format("opentype");
+}

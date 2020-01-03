@@ -3,3 +3,4 @@
 *******************************/
 
 @pageBackground: #f5f5f5;
+@fontName : 'proxima-light', sans-serif;

@@ -5,6 +5,9 @@ import Home from "./Home";
 // project writeups
 import { ClothSim } from "../routes";
 
+// todo: components
+// css - todo: responsiveness, animations/hover
+
 const routes = [
   {
     path: "/",
@@ -26,11 +29,10 @@ const routes = [
   {
     path: "/crawler",
     output: () => {
-      window.location.href =
-        "https://github.com/stylate/AudioCrawler";
+      window.location.href = "https://github.com/stylate/AudioCrawler";
       return null;
     }
-  },
+  }
 ];
 
 export const Main = () => (
