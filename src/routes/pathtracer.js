@@ -515,6 +515,8 @@ export const Pathtracer = () => {
           microfacet materials. Lastly, we utilize the camera and its basic
           functionalities—specifically the depth of field.
         </p>
+
+        <p><u>Disclaimer:</u> Best viewed on non-mobile devices.</p>
         <Header as="h2">Ray Generation & Scene Interaction</Header>
         <p>
           In this part, we implement ray generation; that is, we shoot rays

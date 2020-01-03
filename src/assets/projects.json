@@ -18,14 +18,14 @@
         "meta": "C++, GRAPHICS",
         "description": "Physically-based renderer based on 3D COLLADA models and a pathtracing algorithm.",
         "image": "",
-        "href": "https://stylate.github.io/pathtracer/"
+        "href": "/pathtracer"
     },
     {
         "header": "Mosaic Builder",
         "meta": "PYTHON, PHOTO MANIP.",
         "description": "Automatic image mosaicing with the Multi-Scale Oriented Patches (MOPS) algorithm.",
         "image": "",
-        "href": "https://stylate.github.io/image-warping/"
+        "href": "/mosaic-builder"
     },
     {
         "header": "AudioCrawler",

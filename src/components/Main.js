@@ -3,9 +3,8 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 
 // project writeups
-import { ClothSim, Pathtracer } from "../routes";
+import { ClothSim, Pathtracer, Mosaic } from "../routes";
 
-// todo: components
 // css - todo: responsiveness, animations/hover
 
 const routes = [
@@ -29,6 +28,10 @@ const routes = [
   {
     path: "/pathtracer",
     output: () => <Pathtracer />
+  },
+  {
+    path: "/mosaic-builder",
+    output: () => <Mosaic />
   },
   {
     path: "/crawler",
