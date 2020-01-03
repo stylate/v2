@@ -4,6 +4,7 @@ import Items from "./Items";
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 import Projects from "../assets/projects.json";
+import resume from "../assets/resume.pdf";
 
 const Wrapper = styled.div`
   padding: 45px;
@@ -60,7 +61,7 @@ const Splash = () => {
         </Text>
         <Text size="small">previously >> akamai, fox networks</Text>
         <Text size="small">
-          cv >> <a href="/">here</a>
+          cv >> <a href={resume}>here</a>
         </Text>
         <Text size="small">
           <a href="https://github.com/stylate">
