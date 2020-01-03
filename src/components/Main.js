@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 
 // project writeups
-import { ClothSim } from "../routes";
+import { ClothSim, Pathtracer } from "../routes";
 
 // todo: components
 // css - todo: responsiveness, animations/hover
@@ -25,6 +25,10 @@ const routes = [
   {
     path: "/clothsim",
     output: () => <ClothSim />
+  },
+  {
+    path: "/pathtracer",
+    output: () => <Pathtracer />
   },
   {
     path: "/crawler",
