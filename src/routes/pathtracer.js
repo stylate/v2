@@ -22,6 +22,7 @@ export const Pathtracer = () => {
   const condition1 = "pdf <= 0";
   const condition2 = "r.depth <= 1";
   const condition3 = "$I \\leq maxTolerance \\times mean$";
+  const snell = "$\\sqrt{1 - \\eta ^2(1 - \\cos ^2 \\theta)}$";
   const grids = [
     <Grid stackable columns={2}>
       <Grid.Row>
@@ -260,6 +261,243 @@ export const Pathtracer = () => {
           />
         </Grid.Column>
       </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={2}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part6/spheres_0.png"
+            size="medium"
+          />
+          <figcaption align="middle">m = 0</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part6/spheres_1.png"
+            size="medium"
+          />
+          <figcaption align="middle">m = 1</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part6/spheres_2.png"
+            size="medium"
+          />
+          <figcaption align="middle">m = 2</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part6/spheres_3.png"
+            size="medium"
+          />
+          <figcaption align="middle">m = 3</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part6/spheres_4.png"
+            size="medium"
+          />
+          <figcaption align="middle">m = 4</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part6/spheres_5.png"
+            size="medium"
+          />
+          <figcaption align="middle">m = 5</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={2}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/dragon_0.005.png"
+            size="medium"
+          />
+          <figcaption align="middle">
+            <Latex>$\alpha = 0.005$</Latex>
+          </figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/dragon_0.05.png"
+            size="medium"
+          />
+          <figcaption align="middle">
+            <Latex>$\alpha = 0.05$</Latex>
+          </figcaption>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/dragon_0.25.png"
+            size="medium"
+          />
+          <figcaption align="middle">
+            <Latex>$\alpha = 0.25$</Latex>
+          </figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/dragon_0.5.png"
+            size="medium"
+          />
+          <figcaption align="middle">
+            <Latex>$\alpha = 0.5$</Latex>
+          </figcaption>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={2}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/bunny-cos.png"
+            size="medium"
+          />
+          <figcaption align="middle">Cosine Hemisphere Sampling</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/bunny-imp.png"
+            size="medium"
+          />
+          <figcaption align="middle">Importance Sampling</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={3}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/dragon_ti.png"
+            size="medium"
+          />
+          <figcaption align="middle">Titanium</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/dragon_tic.png"
+            size="medium"
+          />
+          <figcaption align="middle">Titanium Carbide</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/dragon_hg.png"
+            size="medium"
+          />
+          <figcaption align="middle">Mercury</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={2}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part8/bunny_unlit_uniform.png"
+            size="medium"
+          />
+          <figcaption align="middle">unlit, uniform</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part8/bunny_unlit_imp.png"
+            size="medium"
+          />
+          <figcaption align="middle">unlit, importance</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part8/bunny_cu_uniform.png"
+            size="medium"
+          />
+          <figcaption align="middle">copper, uniform</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part8/bunny_cu_imp.png"
+            size="medium"
+          />
+          <figcaption align="middle">copper, importance</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={2}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/b0.25-d3.9.png"
+            size="medium"
+          />
+          <figcaption align="middle">d = 3.9</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/b0.25-d4.1.png"
+            size="medium"
+          />
+          <figcaption align="middle">d = 4.1</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/b0.25-d4.4.png"
+            size="medium"
+          />
+          <figcaption align="middle">d = 4.4</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/b0.25-d4.7.png"
+            size="medium"
+          />
+          <figcaption align="middle">d = 4.7</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>,
+    <Grid stackable columns={2}>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/b0.01-d4.7.png"
+            size="medium"
+          />
+          <figcaption align="middle">b = 0.01</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/b0.125-d4.7.png"
+            size="medium"
+          />
+          <figcaption align="middle">b = 0.125</figcaption>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/b0.25-d4.4.png"
+            size="medium"
+          />
+          <figcaption align="middle">d = 4.4</figcaption>
+        </Grid.Column>
+        <Grid.Column>
+          <Picture
+            src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/b0.5-d4.7.png"
+            size="medium"
+          />
+          <figcaption align="middle">d = 4.7</figcaption>
+        </Grid.Column>
+      </Grid.Row>
     </Grid>
   ];
   return (
@@ -277,7 +515,6 @@ export const Pathtracer = () => {
           microfacet materials. Lastly, we utilize the camera and its basic
           functionalities—specifically the depth of field.
         </p>
-
         <Header as="h2">Ray Generation & Scene Interaction</Header>
         <p>
           In this part, we implement ray generation; that is, we shoot rays
@@ -372,7 +609,6 @@ export const Pathtracer = () => {
           following two images:
         </p>
         {grids[0]}
-
         <Header as="h2">Bounding Volume Hierarchy</Header>
         <p>
           When trying to render, for instance, a cow with the starter code, we
@@ -476,7 +712,6 @@ export const Pathtracer = () => {
           than a minute as opposed to the naive implementation taking at least
           5.
         </p>
-
         <Header as="h2">Direct Illumination</Header>
         <p>
           Now, we get to render images with realistic shading! But first, we
@@ -600,7 +835,6 @@ export const Pathtracer = () => {
           over. Thus, there exists an inverse relationship with noise and light
           rays, though not as strong as say, noise and samples/pixel.
         </p>
-
         <Header as="h2">Global Illumination</Header>
         <p>
           Now, we want to render images with global illumination, primarily
@@ -702,7 +936,6 @@ export const Pathtracer = () => {
           of noise is extremely high, only to converge towards little to no
           noise, as evident on the last render.
         </p>
-
         <Header as="h2">Adaptive Sampling</Header>
         <p>
           Though the images in the previous part are less noisy, the rendering
@@ -737,6 +970,262 @@ export const Pathtracer = () => {
           following:
         </p>
         {grids[9]}
+        <Header as="h2">Mirror & Glass Materials</Header>
+        <p>
+          In this section, we implement both mirror and glass models with both
+          refraction and reflection.
+        </p>
+        <Header as="h3">Reflection</Header>
+        <p>
+          How reflection is implemented is a simple negative transformation of
+          the x and y coordinate, while leaving the z coordinate intact.
+          Specifically, we transform{" "}
+          <Latex>$(x, y, z) \mapsto (-x, -y, z)$</Latex>.
+        </p>
+        <Header as="h3">Mirror Material</Header>
+        <p>
+          To implement an actual mirror material, what we do is set the pdf to 1
+          and call <kbd>reflect()</kbd> with <Latex>$w_o$</Latex> and{" "}
+          <Latex>$w_i$</Latex> as the parameters. We then return{" "}
+          <kbd>reflectance / abs_cos_theta(*wi)</kbd> to eliminate Lambertian
+          falloff.
+        </p>
+        <Header as="h3">Refraction</Header>
+        <p>
+          A refreshing definition on refraction is light being transmitted
+          through a surface. How this works specifically is through{" "}
+          <a href="https://en.wikipedia.org/wiki/Snell%27s_law">SSnell's Law</a>
+          , or in other words, the law of refraction. Suppose that the light
+          we're working with is going in direction wo. If its z coordinate is
+          positive, then we can claim that the light is entering the material.
+          Otherwise, light is exiting the material. Ultimately, Snell's law
+          yields us the equation:
+        </p>
+        <Math>
+          <Latex>{snell}</Latex>
+        </Math>
+        <p>
+          Furthermore, we want to state what eta actually equals to, since it's
+          variable. If light is entering the material,{" "}
+          <Latex>$\eta = 1 / ior$</Latex>. Otherwise,
+          <Latex>$\eta = ior$</Latex>. In spherical coordinates, we return the
+          direction <Latex>$w_i$</Latex> as following, if and only if there is
+          no total internal reflection (the equation above yields a negative
+          result).
+        </p>
+        <Picture src="https://pathtracer.s3-us-west-1.amazonaws.com/part6/snells2.png" />
+        <Header as="h3">Glass Material</Header>
+        <p>
+          For simplicity, we use{" "}
+          <a href="https://en.wikipedia.org/wiki/Schlick%27s_approximation">
+            Schlick's approximation
+          </a>{" "}
+          to give a coin-flip probability of reflecting or refracting if there
+          doesn't exist total internal reflection. We do this as glass material
+          reflects and refracts, and this approximation is actually a
+          simplification of the Fresnel Equations model. Shown below are images
+          of the mirror and glass balls, resulting from all of the previous
+          steps, and varying in <kbd>max_ray_depth</kbd>.
+        </p>
+        {grids[10]}
+        <center>
+          <Picture src="https://pathtracer.s3-us-west-1.amazonaws.com/part6/spheres_100.png" />
+        </center>
+        <figcaption align="middle">m = 100</figcaption>
+        <p>
+          What we notice is that when <kbd>m = 0</kbd>, the entire room is pitch
+          black except the light source (as no light is bounced). When the light
+          bounces once, the entire room is emitted besides the balls. Only then,
+          do we start seeing mirror and glass materials on the balls when{" "}
+          <kbd>m = 2</kbd> and onwards. The more bounces there are, the more
+          light gthat gets emitted through the glass, and the more light that
+          gets reflected by the mirror. However, it gets to the point where
+          there are too many bounces going on; this in fact diffuses too much
+          light over the entire photo, essentially creating a blur. This is
+          noted when <kbd>m = 100</kbd>.
+        </p>
+
+        <Header as="h2">Microfacet Material</Header>
+        <p>
+          In this section, we implement microfacet material with emphasis on
+          isotropic rough conductors that only reflect (no refraction
+          implementation). This is done by calculating <kbd>f()</kbd> using the
+          Fresnel term, shadow-masking term normal distribution function (NDF),
+          macro surface normal, and the half vector (<Latex>$w_o + w_i$</Latex>,
+          normalized). In equation form, we calculate the following:
+        </p>
+        <Picture src="https://pathtracer.s3-us-west-1.amazonaws.com/part7/sample_f.png" />
+        <p>
+          When these terms are all correctly implemented, we get the following
+          dragon images (with varying alphas):
+        </p>
+        {grids[11]}
+        <p>
+          Note that the varying alphas determine how glossy the material is.
+          More specifically, lower alphas make the material glossier, and higher
+          alphas dull the material.
+        </p>
+        <Header as="h3">Importance Sampling</Header>
+        <p>
+          By default, we have hemisphere sampling, which can be very inefficient
+          and ineffective due to some pixels containing significantly less
+          incoming radiance. This is replaced by importance sampling due to the
+          <a href="https://agraphicsguy.wordpress.com/2015/11/01/sampling-microfacet-brdf/">
+            Beckmann NDF
+          </a>
+          . The images below feature a comparison between hemisphere and
+          importance sampling:
+        </p>
+        {grids[12]}
+        <p>
+          As we see here, the bunny with hemisphere sampling has no light
+          transmitting through its edges/outlines. In fact, the bunny has
+          significantly less radiance throughout and the entire cornell box has
+          significantly more noise. On the other hand, the bunny with importance
+          sampling has less noise and more incoming radiance throughout its
+          pixels, thus highlighting more of its microfacet material. This is
+          especially due to how the model is placed directly below the light
+          source (which would clearly emit more radiance than other pixels of
+          the image).
+        </p>
+        <Header as="h3">Other Materials</Header>
+        <p>
+          As a fun gesture, the following images are of a dragon with titanium,
+          titanium carbide, and mercury material. Though these all look a bit
+          similar, there does exist some differences that differentiate the
+          materials between the rest. This is done by altering the dragon's eta
+          and k values in the <kbd>.dae</kbd> files themselves.
+        </p>
+        {grids[13]}
+
+        <Header as="h2">Environment Light</Header>
+        <p>
+          Now instead of the cornell box, we can sample our light from various
+          environment lights. These lights in fact supply incident radiance from
+          all directions of an arbitrary sphere. This is representative of how
+          lighting works in the real world, whether it be in a random hall, or a
+          park—anywhere. This works by sampling from a texture map characterized
+          by <Latex>$\phi$</Latex> and <Latex>$\theta$</Latex>. This section in
+          fact will cover both uniform and importance sampling.
+        </p>
+        <p>
+          For reference, this is the environment light that will be used in the
+          following environment light renders.
+        </p>
+        <Picture src="https://pathtracer.s3-us-west-1.amazonaws.com/part8/field.jpg" />
+        <Header as="h3">Uniform Sampling</Header>
+        <p>
+          How uniform sampling from environment light works is that a random
+          direction from a sphere is received and converted to spherical
+          coordinates. This is then used to retrieve radiance values from the
+          texture map using bilinear interpolation, with the pdf being{" "}
+          <Latex>$1 / 4 \pi$</Latex>.
+        </p>
+        <Header as="h3">Importance Sampling</Header>
+        <p>
+          An arbitrary environment light source has various areas of
+          concentration where radiance is at its highest. Thus, it makes sense
+          to bias sampled directions twoards these concentrated areas, thus
+          reducing noise. On a high-level understanding, this is done by
+          assigning a probability to each pixel in the environment map based on
+          total flux. More specifically, we sample rows of the environment map
+          with marginal distribution and pixels within these rows with
+          conditional distribution. We then perform bilinear interpolation to
+          retrieve the appropriate radiance.
+        </p>
+        <p>
+          If the marginal and conditional distributions are done correctly, we
+          get the following image:
+        </p>
+        <Picture src="https://pathtracer.s3-us-west-1.amazonaws.com/part8/probability_debug.png" />
+        <p>
+          If the importance sampling procedure is implemented correctly, we get
+          the following images (these are comparisons between uniform and
+          importance sampling).
+        </p>
+        {grids[14]}
+        <p>
+          What we notice in the uniformly sampled images are that the material
+          contains high variance; that is, the radiance from the environment map
+          is very spread out throughout the entire model. In fact, the amount of
+          incident radiance the pixels receive is significantly lower. This
+          ignores the fact that the environment map that is being used for these
+          renders contains a light source—the sun. Thus, the bunny doesn't have
+          much information/material rendered other than just noise.
+        </p>
+        <p>
+          On the other hand, we recognize that most of the radiance from the
+          environment light comes from the sun, so we bias our random sampling
+          towards that light source. As a result, the bunny in both unlit and
+          copper versions is appropriately rendered and we can see the materials
+          clearly (and have a more smooth rendering of the platform).
+        </p>
+
+        <Header as="h2">Depth of Field</Header>
+        <p>
+          Previously, we used pinhole cameras such that our implementation
+          ensured that the entire render was in focus. This was possible due to
+          the fact that all of the light would be directed towards one hole in a
+          pinhole camera. Thin lenses, on the other hand, theoretically have
+          numerous amounts of rays from any directions all converging onto one
+          point. They also refract at a plane, and oubjects are focused based on
+          the focal distance between the plane and the lens. We'll be
+          demonstrating depth of field with the microfacet dragon model as an
+          example.
+        </p>
+        <p>Consider the diagram below:</p>
+        <Picture src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/diagram.jpg" />
+        <p>
+          Suppose our current pixel is already converted to{" "}
+          <Latex>$(-x, -y, 1)$</Latex>
+          appropiately. The previous parts of the project simply shot a ray
+          through the origin towards <Latex>$(x, y, -1)$</Latex>. However, we
+          are able to project our pixel through any point on the thin lens under
+          the coordinates
+          <Latex>$(s_x, s_y, 0)$</Latex>, for the lens is in plane{" "}
+          <Latex>$z = 0$</Latex>. Ultimately, we want to construct a ray
+          starting at <kbd>pLens</kbd> gravitating towards <kbd>pFocus</kbd>{" "}
+          (the blue vector)!
+        </p>
+        <p>
+          To start off, <kbd>pLens</kbd> is uniformly sampled based on these
+          following coordinates:
+        </p>
+        <Picture src="https://pathtracer.s3-us-west-1.amazonaws.com/part9/diagram2.png" />
+        <p>
+          Next, we calculate the point pFocus based on the current pixel{" "}
+          <Latex>$(-x, -y, 1)$</Latex> and the focal distance. Note that we want
+          our direction to be exiting the lens, not entering the lens. Thus, we
+          can either multiply the current pixel by <kbd>-focalDistance</kbd>, or
+          reflect the current pixel across all axes and multiply the result by{" "}
+          <kbd>focalDistance</kbd>. Once we have <kbd>pFocus</kbd>, all we need
+          to do to generate the blue vector is subtracting <kbd>pFocus</kbd> by{" "}
+          <kbd>pLens</kbd>.
+        </p>
+        <p>
+          Thus, our final ray begins at <kbd>pos + pLens</kbd>, and is headed
+          towards
+          <kbd>pFocus - pLens</kbd>—this is of course with all coordinate
+          conversions and normalization completed appropriately. If implemented
+          correctly, we can focus on different parts of the image (based on the
+          focal distance).
+        </p>
+        <p>
+          Consider the following images below. Our default aperture for these
+          photos are 0.25. We vary the focal distance from 3.9 to 4.7, and see
+          that different parts of the image are focused (as they belong in
+          different planes). Recall that our lens is simply projecting a ray
+          towards <kbd>-focalDistance * center_pixel</kbd>.
+        </p>
+        {grids[15]}
+        <p>
+          We also play with the aperture values while maintaining the same focal
+          distance! It turns out that increasing aperture values will blur out
+          the entire photo, while decreasing the aperture will sharpen more and
+          more of the photo. Parts of the light source also seem to "bend" when
+          being focused as well!
+        </p>
+        {grids[16]}
       </Container>
     </Wrapper>
   );
