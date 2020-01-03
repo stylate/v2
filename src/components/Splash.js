@@ -55,8 +55,7 @@ const Splash = () => {
         <Text>
           in my spare time, i shoot lots of{" "}
           <a href="https://alandn.me">photos</a>, watch too many{" "}
-          <a href="https://soundcloud.com/stylate">movies</a>, and make{" "}
-          <a href="https://soundcloud.com/stylate">music</a>. sort of. i also
+          <a href="https://soundcloud.com/stylate">movies</a>, and
           read up a little bit too much on fashion.
         </Text>
         <Text size="small">previously >> akamai, fox networks</Text>
