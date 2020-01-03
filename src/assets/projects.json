@@ -22,7 +22,7 @@
     },
     {
         "header": "Mosaic Builder",
-        "meta": "PYTHON, PHOTO MANIP.",
+        "meta": "PYTHON, COMPUTER VISION",
         "description": "Automatic image mosaicing with the Multi-Scale Oriented Patches (MOPS) algorithm.",
         "image": "",
         "href": "/mosaic-builder"
