@@ -8,10 +8,6 @@ const Wrapper = styled.div`
   margin-left: 13px;
 `;
 
-const Row = styled(Grid.Row)`
-  padding: 0px;
-`;
-
 const Items = props => {
   const { items } = props;
   return (

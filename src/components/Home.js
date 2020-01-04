@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import anime from "animejs";
 import Splash from "./Splash";
 import Three from "./Three";
 import { Grid, Responsive } from "semantic-ui-react";
@@ -14,6 +15,15 @@ const Layout = styled.div`
 `;
 
 const Home = () => {
+  useEffect(() => {
+    anime({
+      targets: Layout,
+      opacity: [0, 1],
+      delay: 2000,
+      easing: "easeInOutExpo",
+      duration: 3000
+    });
+  }, []);
   return (
     <Layout>
       <Grid columns='equal'>

@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import anime from "animejs";
+import React from "react";
 import Items from "./Items";
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
@@ -31,15 +30,6 @@ const Text = styled.div`
 `;
 
 const Splash = () => {
-  useEffect(() => {
-    anime({
-      targets: Wrapper,
-      opacity: [0, 100],
-      delay: 2000,
-      easing: "easeInOutExpo",
-      duration: 3000
-    });
-  }, []);
   return (
     <Wrapper>
       <Content>

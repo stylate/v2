@@ -12,11 +12,6 @@ const Picture = styled(Image)`
   margin-bottom: 2%;
 `;
 
-const Math = styled.div`
-  text-align: center;
-  margin-bottom: 2%;
-`;
-
 export const Mosaic = () => {
   const condition1 = "$1-NN / 2-NN < k$";
   const condition2 = "$SSD(p', Hp) < k$";
