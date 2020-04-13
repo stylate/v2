@@ -46,6 +46,7 @@ const routes = [
       window.location.href = "https://github.com/stylate/spectra";
       return null;
     }
+  }
 ];
 
 export const Main = () => (
