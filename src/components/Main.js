@@ -39,7 +39,13 @@ const routes = [
       window.location.href = "https://github.com/stylate/AudioCrawler";
       return null;
     }
-  }
+  },
+  {
+    path: "/spectra",
+    output: () => {
+      window.location.href = "https://github.com/stylate/spectra";
+      return null;
+    }
 ];
 
 export const Main = () => (
