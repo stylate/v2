@@ -43,7 +43,7 @@ const routes = [
   {
     path: "/spectra",
     output: () => {
-      window.location.href = "https://github.com/stylate/style-transfer";
+      window.location.href = "https://github.com/stylate/style-transfer/tree/server-dev";
       return null;
     }
   }
