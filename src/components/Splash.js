@@ -16,14 +16,24 @@ const Content = styled.div`
 
 const Header = styled.h1`
   font-family: "EB Garamond", serif;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: inherit;
   letter-spacing: 1.2px;
 `;
 
+const List = styled.ul`
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style-type: none;
+`;
+
+const ListItem = styled.li`
+  margin-left: -30px;
+`;
+
 const Text = styled.div`
-  font-family: "Overpass Mono", monospace;
-  font-size: ${props => (props.size === "small" ? 12 : 16)}px;
+  font-family: "Inconsolata", monospace;
+  font-size: ${props => (props.size === "small" ? 12 : 18)}px;
   line-height: ${props => (props.size === "small" ? 0.3 : 1.5)}em;
   margin-bottom: 20px;
   width: 100%;
@@ -33,25 +43,47 @@ const Splash = () => {
   return (
     <Wrapper>
       <Content>
-        <Header>alan nguyen</Header>
+        <Header>hello!</Header>
+        <Text>i'm alan, a software engineer based in new york.</Text>
         <Text>
-          recently studied computer science at UC Berkeley. currently, i'm
-          interested in computer graphics and{" "}
-          <a href="https://en.wikipedia.org/wiki/Creative_coding">
-            creative coding
+          right now, i am interested in: blockchain, computer vision, and creative
+          computing.
+        </Text>
+        <Text>
+          currently——
+          <List>
+            <ListItem>
+              software engineer @ <a href="https://circle.com">circle</a>
+            </ListItem>
+          </List>
+          previously——
+          <List>
+            <ListItem>
+              intern @ <a href="https://www.akamai.com/">akamai</a> and{" "}
+              <a href="https://www.foxtv.es/">fox networks</a>
+            </ListItem>
+            <ListItem>
+              photo lead and instructor @{" "}
+              <a href="http://innovativedesign.club/">innovative design</a>
+            </ListItem>
+            <ListItem>
+              web lead @{" "}
+              <a href="http://www.baremagazine.org/">bare magazine</a>
+            </ListItem>
+            <ListItem>
+              staff writer @ <a href="https://www.berkeleygarb.com/">garb</a>
+            </ListItem>
+          </List>
+        </Text>
+        <Text>
+          likes: <a href="https://alandn.me">taking photos</a>, long distance
+          running,{" "}
+          <a href="https://letterboxd.com/carbine/">watching/analyzing films</a>
+          , avant-garde/artisanal fashion,{" "}
+          <a href="https://open.spotify.com/user/flexcy_?si=47IFPNABRUud-pcFcGo1pg">
+            playlist making
           </a>
-          {""}
-          —particularly their interactions with digital media (music, images).
-        </Text>
-        <Text>
-          in my spare time, i shoot lots of{" "}
-          <a href="https://alandn.me">photos</a>, watch too many{" "}
-          <a href="https://letterboxd.com/carbine/">movies</a>, and
-          read up a little bit too much on fashion.
-        </Text>
-        <Text size="small">previously >> akamai, fox networks</Text>
-        <Text size="small">
-          cv >> <a href={resume}>here</a>
+          .
         </Text>
         <Text size="small">
           <a href="https://github.com/stylate">
@@ -61,8 +93,6 @@ const Splash = () => {
             <Icon name="linkedin" size="large" />
           </a>
         </Text>
-        <Text>projects >></Text>
-        <Items items={Projects} />
       </Content>
     </Wrapper>
   );
