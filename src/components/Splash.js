@@ -44,7 +44,7 @@ const Splash = () => {
     <Wrapper>
       <Content>
         <Header>hello!</Header>
-        <Text>i'm alan, a software engineer based in new york.</Text>
+        <Text>i'm alan, a software engineer and <a href="https://alandn.me">photographer</a> based in new york.</Text>
         <Text>
           right now, i am interested in: blockchain, computer vision, and creative
           computing.
@@ -76,7 +76,7 @@ const Splash = () => {
           </List>
         </Text>
         <Text>
-          likes: <a href="https://alandn.me">taking photos</a>, long distance
+          likes: long distance
           running,{" "}
           <a href="https://letterboxd.com/carbine/">watching/analyzing films</a>
           , avant-garde/artisanal fashion,{" "}
