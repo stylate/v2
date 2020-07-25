@@ -58,6 +58,7 @@ const Splash = () => {
           </List>
           previously——
           <List>
+            <ListItem>computer science grad ('19) @ uc berkeley</ListItem>
             <ListItem>
               intern @ <a href="https://www.akamai.com/">akamai</a> and{" "}
               <a href="https://www.foxtv.es/">fox networks</a>
