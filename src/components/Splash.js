@@ -89,8 +89,7 @@ const Splash = () => {
           .
         </Text>
         <Text>
-            i can be found on <a href="https://github.com/stylate">github</a>, <a href="https://linkedin.com/in/alandn">linkedin</a>, 
-    <a href="https://instagram.com/badgesture">instagram</a>, and <a href="https://are.na/alan-nguyen">are.na</a>.
+            i can be found on <a href="https://github.com/stylate">github</a>, <a href="https://linkedin.com/in/alandn">linkedin</a>, <a href="https://instagram.com/badgesture">instagram</a>, and <a href="https://are.na/alan-nguyen">are.na</a>.
         </Text>
       </Content>
     </Wrapper>
