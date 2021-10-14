@@ -4,17 +4,17 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.1.2",
-    "animejs": "^3.1.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-latex": "^1.5.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
+    "animejs": "^3.2.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-latex": "^1.6.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^3.4.4",
     "react-three-fiber": "^3.0.17",
     "styled-components": "^4.4.1",
-    "three": "^0.112.1"
+    "three": "^0.133.1"
   },
   "scripts": {
     "start": "craco start",
@@ -38,8 +38,8 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^5.6.2",
-    "@semantic-ui-react/craco-less": "^1.2.1",
+    "@craco/craco": "^5.9.0",
+    "@semantic-ui-react/craco-less": "^1.2.3",
     "semantic-ui-less": "^2.4.1",
     "semantic-ui-react": "^0.88.2"
   }

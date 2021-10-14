@@ -43,53 +43,15 @@ const Splash = () => {
   return (
     <Wrapper>
       <Content>
-        <Header>hello!</Header>
         <Text>
-          i'm alan, a software engineer and{" "}
+          hello, i'm alan! i'm a software engineer and{" "}
           <a href="https://alandn.me">photographer</a> based in new york.
         </Text>
         <Text>
-          right now, i am interested in: blockchain, computer vision, and
-          creative computing.
+          right now, i am interested in: web3, avant-garde fashion, internet art, and music production.
         </Text>
         <Text>
-          currently——
-          <List>
-            <ListItem>
-              software engineer @ <a href="https://circle.com">circle</a>
-            </ListItem>
-          </List>
-          previously——
-          <List>
-            <ListItem>computer science grad ('19) @ uc berkeley</ListItem>
-            <ListItem>
-              intern @ <a href="https://www.akamai.com/">akamai</a> and{" "}
-              <a href="https://www.foxtv.es/">fox networks</a>
-            </ListItem>
-            <ListItem>
-              photo lead and instructor @{" "}
-              <a href="http://innovativedesign.club/">innovative design</a>
-            </ListItem>
-            <ListItem>
-              web lead @{" "}
-              <a href="http://www.baremagazine.org/">bare magazine</a>
-            </ListItem>
-            <ListItem>
-              staff writer @ <a href="https://www.berkeleygarb.com/">garb</a>
-            </ListItem>
-          </List>
-        </Text>
-        <Text>
-          likes: indigo dyes,{" "}
-          <a href="https://letterboxd.com/carbine/">watching/analyzing films</a>
-          , avant-garde/artisanal fashion,{" "}
-          <a href="https://open.spotify.com/user/flexcy_?si=47IFPNABRUud-pcFcGo1pg">
-            playlist making
-          </a>
-          .
-        </Text>
-        <Text>
-            i can be found on <a href="https://github.com/stylate">github</a>, <a href="https://linkedin.com/in/alandn">linkedin</a>, and <a href="https://are.na/alan-nguyen">are.na</a>.
+            i can be found elsewhere @ <a href="https://instagr.am/badgesture">instagram</a> and <a href="https://are.na/alan">are.na</a>.
         </Text>
       </Content>
     </Wrapper>
