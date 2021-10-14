@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import anime from "animejs";
 import Splash from "./Splash";
-import Three from "./Three";
-import { Grid, Responsive } from "semantic-ui-react";
 import styled from "styled-components";
 
 const Layout = styled.div`

@@ -1,9 +1,5 @@
 import React from "react";
-import Items from "./Items";
 import styled from "styled-components";
-import { Icon } from "semantic-ui-react";
-import Projects from "../assets/projects.json";
-import resume from "../assets/resume.pdf";
 
 const Wrapper = styled.div`
   padding: 45px;
@@ -12,23 +8,6 @@ const Wrapper = styled.div`
 
 const Content = styled.div`
   opacity: 0.9;
-`;
-
-const Header = styled.h1`
-  font-family: "EB Garamond", serif;
-  font-size: 40px;
-  font-weight: inherit;
-  letter-spacing: 1.2px;
-`;
-
-const List = styled.ul`
-  margin-top: 5px;
-  margin-bottom: 5px;
-  list-style-type: none;
-`;
-
-const ListItem = styled.li`
-  margin-left: -30px;
 `;
 
 const Text = styled.div`
