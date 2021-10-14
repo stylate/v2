@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 45px;
+  margin-top: 5%;
   margin-left: 7%;
 `;
 
@@ -23,14 +24,15 @@ const Splash = () => {
     <Wrapper>
       <Content>
         <Text>
-          hello, i'm alan! i'm a software engineer and{" "}
+          hello, i'm alan! i'm a developer and{" "}
           <a href="https://alandn.me">photographer</a> based in new york.
         </Text>
         <Text>
-          right now, i am interested in: web3, avant-garde fashion, internet art, and music production.
+          i will eventually update this website, but right now...{" "}<br />
+          i am interested in: web3, avant-garde fashion, internet art, and music production.
         </Text>
         <Text>
-            i can be found elsewhere @ <a href="https://instagr.am/badgesture">instagram</a> and <a href="https://are.na/alan">are.na</a>.
+            in the meantime, i can be found elsewhere @ <a href="https://instagr.am/badgesture">instagram</a> and <a href="https://are.na/alan">are.na</a>.
         </Text>
       </Content>
     </Wrapper>
