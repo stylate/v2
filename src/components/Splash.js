@@ -29,7 +29,7 @@ const Splash = () => {
         </Text>
         <Text>
           i will eventually update this website, but right now...{" "}<br />
-          i am interested in: web3, internet art, and music production.
+          i am interested in: web3, internet art, and music production/DJing.
         </Text>
         <Text>
             in the meantime, you can find me @ <a href="https://instagr.am/badgesture">instagram</a> and <a href="https://are.na/alan">are.na</a>.
