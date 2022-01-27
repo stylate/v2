@@ -14,7 +14,7 @@
     "react-scripts": "^3.4.4",
     "react-three-fiber": "^3.0.17",
     "styled-components": "^4.4.1",
-    "three": "^0.133.1"
+    "three": "^0.137.0"
   },
   "scripts": {
     "start": "craco start",
